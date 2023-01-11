@@ -11,9 +11,10 @@ jobs:
       - uses: jirutka/setup-alpine@v1
         with:
           branch: v3.15
+          extra-repositories: http://dl-cdn.alpinelinux.org/alpine/edge/testing
+          packages: alpine-sdk
       - run: cat /etc/alpine-release
         shell: alpine.sh {0}
-      
-      - run: apk add alpine-sdk        
-      - run: abuild -h
+      - run: command -v abuild
+
     
