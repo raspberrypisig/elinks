@@ -15,6 +15,7 @@ jobs:
           packages: alpine-sdk
       - run: cat /etc/alpine-release
         shell: alpine.sh {0}
-      - run: command -v abuild
+      - run: abuild -h
+        shell: alpine.sh {0}
 
     
