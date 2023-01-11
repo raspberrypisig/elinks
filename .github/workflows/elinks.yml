@@ -1,0 +1,16 @@
+name: elinks
+on:
+  workflow_dispatch:
+jobs:
+  elinks:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+      - uses: jirutka/setup-alpine@v1
+        with:
+          branch: v3.15
+      - run: cat /etc/alpine-release
+        shell: alpine.sh {0}
+
