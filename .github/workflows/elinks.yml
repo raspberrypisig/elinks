@@ -14,5 +14,5 @@ jobs:
       - run: cat /etc/alpine-release
         shell: alpine.sh {0}
       
-      - run: apkbuild -h
+      - run: abuild -h
         shell: alpine.sh {0}
